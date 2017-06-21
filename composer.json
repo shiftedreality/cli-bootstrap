@@ -1,0 +1,21 @@
+{
+    "name": "shiftedreality/cli-bootstrap",
+    "description": "Simpli CLI application for your productivity",
+    "type": "project",
+    "require": {
+        "symfony/console": "^3.3"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Oleh Posyniak",
+            "email": "oleg.posyniak@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable"
+}
