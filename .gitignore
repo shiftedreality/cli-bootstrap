@@ -1,2 +1,5 @@
 /vendor/
-/.idea
+/.idea/
+/src/
+/tests/
+/config/commands.php

@@ -9,10 +9,12 @@
 set_time_limit(0);
 
 /** @var Composer\Autoload\ClassLoader $loader */
-$loader = require __DIR__.'/../vendor/autoload.php';
+$loader = require __DIR__ . '/../vendor/autoload.php';
 
 $application = new \Symfony\Component\Console\Application();
-$application->addCommands([
-        new \App\Console\Command\RunCommand()
-]);
+$commands = @file_exists(__DIR__ . '/../config/commands.php')
+    ? require_once __DIR__ . '/../config/commands.php'
+    : require_once __DIR__ . '/../config/commands.dist.php';
+
+$application->addCommands($commands);
 $application->run();
